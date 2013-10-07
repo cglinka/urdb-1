@@ -51,12 +51,12 @@
 
     = form_for [@movie, @comment] do |f|
       .location
-        = f.label :username
-        = f.text_field :username
+        = f.label :user
+        = f.text_field :user
 
       .time
         = f.label :comment
         = f.text_field :comment
 
       .submit 
-        = f.submit 'Create Showtime', :class => "button"
+        = f.submit 'Create Comment', :class => "button"
