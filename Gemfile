@@ -37,6 +37,7 @@ gem 'rspec-rails'
 gem 'zurb-foundation'
 gem 'haml-rails'
 gem 'simple_form'
+gem 'hirb'
 
 gem 'rottentomatoes'
 gem 'figaro'
