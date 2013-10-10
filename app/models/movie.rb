@@ -31,7 +31,12 @@ class Movie < ActiveRecord::Base
     scores = self.all.collect do |movie|
       movie.audience_rating
     end
+    scores.compact!
 
-    scores.sum/scores.length
+    if scores.length > 0
+      scores.sum/scores.length
+    else
+      return nil
+    end
   end
 end
