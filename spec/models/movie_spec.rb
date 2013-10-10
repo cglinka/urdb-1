@@ -53,8 +53,8 @@ describe Movie do
     let(:movie2) { Movie.new }
     context "when all movies can be found on Rotten Tomatoes" do
       it "returns the average audience_score for all movies" do
-        allow(movie).to receive(:average_rating).and_return(100)
-        allow(movie2).to receive(:average_rating).and_return(50)
+        allow(movie).to receive(:audience_rating).and_return(100)
+        allow(movie2).to receive(:audience_rating).and_return(50)
         allow(Movie).to receive(:all).and_return([movie, movie2])
 
         expect(Movie.average_rating).to eq(75)
