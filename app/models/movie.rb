@@ -7,6 +7,15 @@ class Movie < ActiveRecord::Base
     RottenMovie.find(title: title, limit: 1)
   end
 
+  def audience_rating
+    r = rotten_finder
+    if r == []
+      return nil
+    else
+      r.ratings.audience_score
+    end
+  end
+
   def snippet
     if description
       description.truncate 50
