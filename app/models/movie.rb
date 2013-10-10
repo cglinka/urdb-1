@@ -6,8 +6,12 @@ class Movie < ActiveRecord::Base
   def rotten_finder
     RottenMovie.find(title: title, limit: 1)
   end
-  
+
   def snippet
-    description.truncate 50
+    if description
+      description.truncate 50
+    else
+      return ''
+    end
   end
 end
