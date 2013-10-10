@@ -25,4 +25,6 @@ class Movie < ActiveRecord::Base
       return ''
     end
   end
+  def self.average_rating
+  end
 end

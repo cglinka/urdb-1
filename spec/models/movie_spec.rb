@@ -48,4 +48,18 @@ describe Movie do
       end
     end
   end
+  
+  describe '.average_rating' do
+    context "when all movies can be found on Rotten Tomatoes" do
+      it "returns the average audience_score for all movies"
+    end
+
+    context "when some movies are not found on Rotten Tomatoes" do
+      it "returns the average audience_score of the movies that were found"
+    end
+
+    context "when no movies are found on Rotten Tomatoes" do
+      it "returns nil"
+    end
+  end
 end
